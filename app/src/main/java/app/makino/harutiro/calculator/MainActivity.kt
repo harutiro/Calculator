@@ -7,9 +7,9 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    var firstNumber = 0
-    var secondNumber = 0
-    var totalNumber = 0
+    var firstNumber = 0.0
+    var secondNumber = 0.0
+    var totalNumber = 0.0
     var operator = "empty"
 
 
@@ -21,13 +21,46 @@ class MainActivity : AppCompatActivity() {
         minusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(150,150,150))
         multiplyButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(150,150,150))
         equalButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(150,150,150))
+        waruButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(150, 150, 150))
 
         plusButton.isEnabled = false
         minusButton.isEnabled = false
         multiplyButton.isEnabled = false
         equalButton.isEnabled = false
+        waruButton.isEnabled = false
 
         numberText.text = firstNumber.toString()
+
+        //00botton
+        numberButton00.setOnClickListener {
+            if (operator == "empty") {
+                firstNumber = firstNumber * 100 + 0
+
+                numberText.text = firstNumber.toString()
+
+                plusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
+                minusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
+                multiplyButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
+                waruButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
+
+                plusButton.isEnabled = true
+                minusButton.isEnabled = true
+                multiplyButton.isEnabled = true
+                equalButton.isEnabled = false
+                waruButton.isEnabled = true
+
+
+            } else {
+                secondNumber = secondNumber * 100 + 0
+
+                numberText.text = secondNumber.toString()
+
+                equalButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
+
+                equalButton.isEnabled = true
+
+            }
+        }
 
         //0ボタン
         numberButton0.setOnClickListener {
@@ -39,19 +72,23 @@ class MainActivity : AppCompatActivity() {
                 plusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
                 minusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
                 multiplyButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
+                waruButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
 
                 plusButton.isEnabled = true
                 minusButton.isEnabled = true
                 multiplyButton.isEnabled = true
-                equalButton.isEnabled = true
+                equalButton.isEnabled = false
+                waruButton.isEnabled = true
 
 
             } else {
                 secondNumber = secondNumber * 10 + 0
 
-                numberText.text = firstNumber.toString()
+                numberText.text = secondNumber.toString()
 
                 equalButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
+
+                equalButton.isEnabled = true
 
             }
         }
@@ -66,19 +103,23 @@ class MainActivity : AppCompatActivity() {
                 plusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240,240,240))
                 minusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240,240,240))
                 multiplyButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240,240,240))
+                waruButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
 
                 plusButton.isEnabled = true
                 minusButton.isEnabled = true
                 multiplyButton.isEnabled = true
-                equalButton.isEnabled = true
+                equalButton.isEnabled = false
+                waruButton.isEnabled = true
 
 
             }else{
                 secondNumber = secondNumber * 10 + 1
 
-                numberText.text = firstNumber.toString()
+                numberText.text = secondNumber.toString()
 
                 equalButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240,240,240))
+
+                equalButton.isEnabled = true
 
             }
         }
@@ -95,20 +136,24 @@ class MainActivity : AppCompatActivity() {
                     ColorStateList.valueOf(Color.rgb(240, 240, 240))
                 multiplyButton.backgroundTintList =
                     ColorStateList.valueOf(Color.rgb(240, 240, 240))
+                waruButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
 
                 plusButton.isEnabled = true
                 minusButton.isEnabled = true
                 multiplyButton.isEnabled = true
-                equalButton.isEnabled = true
+                equalButton.isEnabled = false
+                waruButton.isEnabled = true
 
 
             } else {
                 secondNumber = secondNumber * 10 + 2
 
-                numberText.text = firstNumber.toString()
+                numberText.text = secondNumber.toString()
 
                 equalButton.backgroundTintList =
                     ColorStateList.valueOf(Color.rgb(240, 240, 240))
+
+                equalButton.isEnabled = true
 
             }
         }
@@ -125,20 +170,24 @@ class MainActivity : AppCompatActivity() {
                     ColorStateList.valueOf(Color.rgb(240, 240, 240))
                 multiplyButton.backgroundTintList =
                     ColorStateList.valueOf(Color.rgb(240, 240, 240))
+                waruButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
 
                 plusButton.isEnabled = true
                 minusButton.isEnabled = true
                 multiplyButton.isEnabled = true
-                equalButton.isEnabled = true
+                equalButton.isEnabled = false
+                waruButton.isEnabled = true
 
 
             } else {
                 secondNumber = secondNumber * 10 + 3
 
-                numberText.text = firstNumber.toString()
+                numberText.text = secondNumber.toString()
 
                 equalButton.backgroundTintList =
                     ColorStateList.valueOf(Color.rgb(240, 240, 240))
+
+                equalButton.isEnabled = true
 
             }
         }
@@ -155,20 +204,24 @@ class MainActivity : AppCompatActivity() {
                     ColorStateList.valueOf(Color.rgb(240, 240, 240))
                 multiplyButton.backgroundTintList =
                     ColorStateList.valueOf(Color.rgb(240, 240, 240))
+                waruButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
 
                 plusButton.isEnabled = true
                 minusButton.isEnabled = true
                 multiplyButton.isEnabled = true
-                equalButton.isEnabled = true
+                equalButton.isEnabled = false
+                waruButton.isEnabled =true
 
 
             } else {
                 secondNumber = secondNumber * 10 + 4
 
-                numberText.text = firstNumber.toString()
+                numberText.text = secondNumber.toString()
 
                 equalButton.backgroundTintList =
                     ColorStateList.valueOf(Color.rgb(240, 240, 240))
+
+                equalButton.isEnabled = true
 
             }
         }
@@ -185,20 +238,24 @@ class MainActivity : AppCompatActivity() {
                     ColorStateList.valueOf(Color.rgb(240, 240, 240))
                 multiplyButton.backgroundTintList =
                     ColorStateList.valueOf(Color.rgb(240, 240, 240))
+                waruButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
 
                 plusButton.isEnabled = true
                 minusButton.isEnabled = true
                 multiplyButton.isEnabled = true
-                equalButton.isEnabled = true
+                equalButton.isEnabled = false
+                waruButton.isEnabled =true
 
 
             } else {
                 secondNumber = secondNumber * 10 + 5
 
-                numberText.text = firstNumber.toString()
+                numberText.text = secondNumber.toString()
 
                 equalButton.backgroundTintList =
                     ColorStateList.valueOf(Color.rgb(240, 240, 240))
+
+                equalButton.isEnabled = true
 
             }
         }
@@ -215,20 +272,24 @@ class MainActivity : AppCompatActivity() {
                     ColorStateList.valueOf(Color.rgb(240, 240, 240))
                 multiplyButton.backgroundTintList =
                     ColorStateList.valueOf(Color.rgb(240, 240, 240))
+                waruButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
 
                 plusButton.isEnabled = true
                 minusButton.isEnabled = true
                 multiplyButton.isEnabled = true
-                equalButton.isEnabled = true
+                equalButton.isEnabled = false
+                waruButton.isEnabled = true
 
 
             } else {
                 secondNumber = secondNumber * 10 + 6
 
-                numberText.text = firstNumber.toString()
+                numberText.text = secondNumber.toString()
 
                 equalButton.backgroundTintList =
                     ColorStateList.valueOf(Color.rgb(240, 240, 240))
+
+                equalButton.isEnabled = true
 
             }
         }
@@ -245,20 +306,24 @@ class MainActivity : AppCompatActivity() {
                     ColorStateList.valueOf(Color.rgb(240, 240, 240))
                 multiplyButton.backgroundTintList =
                     ColorStateList.valueOf(Color.rgb(240, 240, 240))
+                waruButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
 
                 plusButton.isEnabled = true
                 minusButton.isEnabled = true
                 multiplyButton.isEnabled = true
-                equalButton.isEnabled = true
+                equalButton.isEnabled = false
+                waruButton.isEnabled =true
 
 
             } else {
                 secondNumber = secondNumber * 10 + 7
 
-                numberText.text = firstNumber.toString()
+                numberText.text = secondNumber.toString()
 
                 equalButton.backgroundTintList =
                     ColorStateList.valueOf(Color.rgb(240, 240, 240))
+
+                equalButton.isEnabled = true
 
             }
         }
@@ -275,20 +340,24 @@ class MainActivity : AppCompatActivity() {
                     ColorStateList.valueOf(Color.rgb(240, 240, 240))
                 multiplyButton.backgroundTintList =
                     ColorStateList.valueOf(Color.rgb(240, 240, 240))
+                waruButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
 
                 plusButton.isEnabled = true
                 minusButton.isEnabled = true
                 multiplyButton.isEnabled = true
-                equalButton.isEnabled = true
+                equalButton.isEnabled = false
+                waruButton.isEnabled = true
 
 
             } else {
                 secondNumber = secondNumber * 10 + 8
 
-                numberText.text = firstNumber.toString()
+                numberText.text = secondNumber.toString()
 
                 equalButton.backgroundTintList =
                     ColorStateList.valueOf(Color.rgb(240, 240, 240))
+
+                equalButton.isEnabled = true
 
             }
         }
@@ -301,24 +370,26 @@ class MainActivity : AppCompatActivity() {
                 numberText.text = firstNumber.toString()
 
                 plusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                minusButton.backgroundTintList =
-                    ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                multiplyButton.backgroundTintList =
-                    ColorStateList.valueOf(Color.rgb(240, 240, 240))
+                waruButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
+                minusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
+                multiplyButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
 
                 plusButton.isEnabled = true
                 minusButton.isEnabled = true
                 multiplyButton.isEnabled = true
-                equalButton.isEnabled = true
+                equalButton.isEnabled = false
+                waruButton.isEnabled = true
 
 
             } else {
                 secondNumber = secondNumber * 10 + 9
 
-                numberText.text = firstNumber.toString()
+                numberText.text = secondNumber.toString()
 
                 equalButton.backgroundTintList =
                     ColorStateList.valueOf(Color.rgb(240, 240, 240))
+
+                equalButton.isEnabled = true
 
             }
         }
@@ -328,6 +399,7 @@ class MainActivity : AppCompatActivity() {
             plusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(220,0,100))
             minusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(150,150,150))
             multiplyButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(150,150,150))
+            waruButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(150,150,150))
 
             operator = "plus"
 
@@ -340,6 +412,7 @@ class MainActivity : AppCompatActivity() {
             minusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(220,0,100))
             plusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(150,150,150))
             multiplyButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(150,150,150))
+            waruButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(150,150,150))
 
             operator = "minus"
 
@@ -352,8 +425,22 @@ class MainActivity : AppCompatActivity() {
             multiplyButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(220,0,100))
             minusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(150,150,150))
             plusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(150,150,150))
+            waruButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(150,150,150))
 
             operator = "multiply"
+
+            numberText.text = secondNumber.toString()
+
+        }
+
+        // /botton
+        waruButton.setOnClickListener {
+            waruButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(220,0,100))
+            plusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(150,150,150))
+            multiplyButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(150,150,150))
+            minusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(150,150,150))
+
+            operator = "waru"
 
             numberText.text = secondNumber.toString()
 
@@ -367,33 +454,45 @@ class MainActivity : AppCompatActivity() {
                 totalNumber = firstNumber - secondNumber
             }else if (operator == "multiply"){
                 totalNumber = firstNumber * secondNumber
+            }else if (operator == "waru"){
+                totalNumber = firstNumber / secondNumber
             }
 
             plusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(150,150,150))
             minusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(150,150,150))
             multiplyButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(150,150,150))
             equalButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(150,150,150))
+            waruButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(150,150,150))
 
-            firstNumber = 0
-            secondNumber = 0
+            firstNumber = 0.0
+            secondNumber = 0.0
             operator = "empty"
             numberText.text = totalNumber.toString()
+
+            plusButton.isEnabled = false
+            minusButton.isEnabled = false
+            multiplyButton.isEnabled = false
+            equalButton.isEnabled = false
+            waruButton.isEnabled = false
         }
 
-        //Cbotton
+        //C,botton
         clearBotton.setOnClickListener {
             plusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(150,150,150))
             minusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(150,150,150))
             multiplyButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(150,150,150))
             equalButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(150,150,150))
+            waruButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(150,150,150))
 
-            firstNumber = 0
-            secondNumber = 0
-            totalNumber = 0
+            firstNumber = 0.0
+            secondNumber = 0.0
+            totalNumber = 0.0
 
             operator = "empty"
 
             numberText.text = totalNumber.toString()
+
+
         }
 
 

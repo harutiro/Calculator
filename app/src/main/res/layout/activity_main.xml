@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00BCD4"
+    android:background="@drawable/zyanpu"
     android:orientation="vertical"
     android:padding="24dp"
     tools:context=".MainActivity">
@@ -12,6 +12,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:backgroundTint="#C9FFEB3B"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,7 +21,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/numberText"
@@ -30,6 +31,7 @@
                 android:background="@drawable/background_white_frame"
                 android:fontFamily="serif-monospace"
                 android:gravity="end"
+                android:maxLines="1"
                 android:padding="16dp"
                 android:text="0"
                 android:textColor="#FFFFFF"
@@ -47,7 +49,7 @@
                     android:layout_height="64dp"
                     android:layout_marginStart="16dp"
                     android:background="@drawable/background_button_circle"
-                    android:backgroundTint="#FFFFFF"
+                    android:backgroundTint="#80FFFFFF"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="7"
                     android:textSize="40sp" />
@@ -58,7 +60,7 @@
                     android:layout_height="64dp"
                     android:layout_marginStart="8dp"
                     android:background="@drawable/background_button_circle"
-                    android:backgroundTint="#FFFFFF"
+                    android:backgroundTint="#80FFFFFF"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="8"
                     android:textSize="40sp" />
@@ -69,7 +71,7 @@
                     android:layout_height="64dp"
                     android:layout_marginStart="8dp"
                     android:background="@drawable/background_button_circle"
-                    android:backgroundTint="#FFFFFF"
+                    android:backgroundTint="#80FFFFFF"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="9"
                     android:textSize="40sp" />
@@ -80,7 +82,7 @@
                     android:layout_height="64dp"
                     android:layout_marginStart="8dp"
                     android:background="@drawable/background_button_circle"
-                    android:backgroundTint="#FFEB3B"
+                    android:backgroundTint="#C9FFEB3B"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="×"
                     android:textSize="40sp" />
@@ -98,7 +100,7 @@
                     android:layout_height="64dp"
                     android:layout_marginStart="16dp"
                     android:background="@drawable/background_button_circle"
-                    android:backgroundTint="#FFFFFF"
+                    android:backgroundTint="#80FFFFFF"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="4"
                     android:textSize="40sp" />
@@ -109,7 +111,7 @@
                     android:layout_height="64dp"
                     android:layout_marginStart="8dp"
                     android:background="@drawable/background_button_circle"
-                    android:backgroundTint="#FFFFFF"
+                    android:backgroundTint="#80FFFFFF"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="5"
                     android:textSize="40sp" />
@@ -120,7 +122,7 @@
                     android:layout_height="64dp"
                     android:layout_marginStart="8dp"
                     android:background="@drawable/background_button_circle"
-                    android:backgroundTint="#FFFFFF"
+                    android:backgroundTint="#80FFFFFF"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="6"
                     android:textSize="40sp" />
@@ -131,7 +133,7 @@
                     android:layout_height="64dp"
                     android:layout_marginStart="8dp"
                     android:background="@drawable/background_button_circle"
-                    android:backgroundTint="#FFEB3B"
+                    android:backgroundTint="#C9FFEB3B"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="-"
                     android:textSize="40sp" />
@@ -149,7 +151,7 @@
                     android:layout_height="64dp"
                     android:layout_marginStart="16dp"
                     android:background="@drawable/background_button_circle"
-                    android:backgroundTint="#FFFFFF"
+                    android:backgroundTint="#80FFFFFF"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="1"
                     android:textSize="40sp" />
@@ -160,7 +162,7 @@
                     android:layout_height="64dp"
                     android:layout_marginStart="8dp"
                     android:background="@drawable/background_button_circle"
-                    android:backgroundTint="#FFFFFF"
+                    android:backgroundTint="#80FFFFFF"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="2"
                     android:textSize="40sp" />
@@ -171,7 +173,7 @@
                     android:layout_height="64dp"
                     android:layout_marginStart="8dp"
                     android:background="@drawable/background_button_circle"
-                    android:backgroundTint="#FFFFFF"
+                    android:backgroundTint="#80FFFFFF"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="3"
                     android:textSize="40sp" />
@@ -182,7 +184,7 @@
                     android:layout_height="64dp"
                     android:layout_marginStart="8dp"
                     android:background="@drawable/background_button_circle"
-                    android:backgroundTint="#FFEB3B"
+                    android:backgroundTint="#C9FFEB3B"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="+"
                     android:textSize="40sp" />
@@ -196,13 +198,24 @@
 
                 <Button
                     android:id="@+id/numberButton0"
-                    android:layout_width="138dp"
+                    android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:layout_marginStart="16dp"
                     android:background="@drawable/background_zero_button_circle"
-                    android:backgroundTint="#FFFFFF"
+                    android:backgroundTint="#80FFFFFF"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="0"
+                    android:textSize="40sp" />
+
+                <Button
+                    android:id="@+id/numberButton00"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/background_button_circle"
+                    android:backgroundTint="#80FFFFFF"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="00"
                     android:textSize="40sp" />
 
                 <Button
@@ -211,9 +224,59 @@
                     android:layout_height="64dp"
                     android:layout_marginStart="8dp"
                     android:background="@drawable/background_button_circle"
-                    android:backgroundTint="#FFEB3B"
+                    android:backgroundTint="#C9FFEB3B"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="C"
+                    android:textSize="40sp" />
+
+                <Button
+                    android:id="@+id/waruButton"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/background_button_circle"
+                    android:backgroundTint="#C9FFEB3B"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="÷"
+                    android:textSize="40sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingTop="16dp">
+
+                <Button
+                    android:id="@+id/botton3"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/background_button_circle"
+                    android:backgroundTint="#C9FFEB3B"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textSize="40sp" />
+
+                <Button
+                    android:id="@+id/botton2"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/background_button_circle"
+                    android:backgroundTint="#C9FFEB3B"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textSize="40sp" />
+
+                <Button
+                    android:id="@+id/botton"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/background_button_circle"
+                    android:backgroundTint="#C9FFEB3B"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:textSize="40sp" />
 
                 <Button
@@ -222,11 +285,13 @@
                     android:layout_height="64dp"
                     android:layout_marginStart="8dp"
                     android:background="@drawable/background_button_circle"
-                    android:backgroundTint="#FFEB3B"
+                    android:backgroundTint="#C9FFEB3B"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="="
                     android:textSize="40sp" />
+
             </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 
