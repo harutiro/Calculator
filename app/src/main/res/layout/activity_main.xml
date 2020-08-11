@@ -219,14 +219,14 @@
                     android:textSize="40sp" />
 
                 <Button
-                    android:id="@+id/clearBotton"
+                    android:id="@+id/equalButton"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:layout_marginStart="8dp"
                     android:background="@drawable/background_button_circle"
                     android:backgroundTint="#C9FFEB3B"
                     android:fontFamily="sans-serif-condensed-medium"
-                    android:text="C"
+                    android:text="="
                     android:textSize="40sp" />
 
                 <Button
@@ -250,44 +250,48 @@
                 android:paddingTop="16dp">
 
                 <Button
-                    android:id="@+id/botton3"
+                    android:id="@+id/ncrButton"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:layout_marginStart="16dp"
                     android:background="@drawable/background_button_circle"
                     android:backgroundTint="#C9FFEB3B"
                     android:fontFamily="sans-serif-condensed-medium"
-                    android:textSize="40sp" />
+                    android:text="com"
+                    android:textSize="20sp" />
 
                 <Button
-                    android:id="@+id/botton2"
+                    android:id="@+id/nprButton"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:layout_marginStart="8dp"
                     android:background="@drawable/background_button_circle"
                     android:backgroundTint="#C9FFEB3B"
                     android:fontFamily="sans-serif-condensed-medium"
-                    android:textSize="40sp" />
+                    android:text="sec"
+                    android:textSize="20sp" />
 
                 <Button
-                    android:id="@+id/botton"
+                    android:id="@+id/rButton"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:layout_marginStart="8dp"
                     android:background="@drawable/background_button_circle"
                     android:backgroundTint="#C9FFEB3B"
                     android:fontFamily="sans-serif-condensed-medium"
-                    android:textSize="40sp" />
+                    android:text="r!"
+                    android:textSize="20sp" />
 
                 <Button
-                    android:id="@+id/equalButton"
+                    android:id="@+id/clearBotton"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
                     android:background="@drawable/background_button_circle"
                     android:backgroundTint="#C9FFEB3B"
                     android:fontFamily="sans-serif-condensed-medium"
-                    android:text="="
+                    android:text="C"
                     android:textSize="40sp" />
 
             </LinearLayout>
