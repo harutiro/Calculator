@@ -712,6 +712,15 @@ class MainActivity : AppCompatActivity() {
 
             numberText.text = firstNumber.toString()
 
+            plusButton.isEnabled = false
+            minusButton.isEnabled = false
+            multiplyButton.isEnabled = false
+            equalButton.isEnabled = false
+            waruButton.isEnabled = false
+            nprButton.isEnabled = false
+            ncrButton.isEnabled = false
+            rButton.isEnabled = false
+
 
         }
 
