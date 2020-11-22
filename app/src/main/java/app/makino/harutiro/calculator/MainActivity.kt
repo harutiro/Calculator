@@ -16,6 +16,45 @@ class MainActivity : AppCompatActivity() {
     var ataiR = 1.0
 
 
+    fun onNumber(num1: Int,num2: Int) {
+
+        if (operator == "empty") {
+            firstNumber = firstNumber * num1 + num2
+
+            numberText.text = firstNumber.toString()
+
+            plusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
+            minusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
+            multiplyButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
+            waruButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
+            rButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240,240,240))
+            ncrButton.backgroundTintList = ColorStateList.valueOf((Color.rgb(240,240,240)))
+            nprButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240,240,240))
+
+            plusButton.isEnabled = true
+            minusButton.isEnabled = true
+            multiplyButton.isEnabled = true
+            equalButton.isEnabled = false
+            waruButton.isEnabled = true
+            nprButton.isEnabled = true
+            ncrButton.isEnabled = true
+            rButton.isEnabled = true
+
+
+        } else {
+            secondNumber = secondNumber * num1 + num2
+
+            numberText.text = secondNumber.toString()
+
+            equalButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
+
+            equalButton.isEnabled = true
+
+        }
+
+    }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -42,431 +81,60 @@ class MainActivity : AppCompatActivity() {
 
         //00botton
         numberButton00.setOnClickListener {
-            if (operator == "empty") {
-                firstNumber = firstNumber * 100 + 0
-
-                numberText.text = firstNumber.toString()
-
-                plusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                minusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                multiplyButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                waruButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                rButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240,240,240))
-                ncrButton.backgroundTintList = ColorStateList.valueOf((Color.rgb(240,240,240)))
-                nprButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240,240,240))
-
-                plusButton.isEnabled = true
-                minusButton.isEnabled = true
-                multiplyButton.isEnabled = true
-                equalButton.isEnabled = false
-                waruButton.isEnabled = true
-                nprButton.isEnabled = true
-                ncrButton.isEnabled = true
-                rButton.isEnabled = true
-
-
-            } else {
-                secondNumber = secondNumber * 100 + 0
-
-                numberText.text = secondNumber.toString()
-
-                equalButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
-
-                equalButton.isEnabled = true
-
-            }
+            onNumber(100,0)
         }
 
         //0ボタン
         numberButton0.setOnClickListener {
-            if (operator == "empty") {
-                firstNumber = firstNumber * 10 + 0
-
-                numberText.text = firstNumber.toString()
-
-                plusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                minusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                multiplyButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                waruButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                rButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240,240,240))
-                ncrButton.backgroundTintList = ColorStateList.valueOf((Color.rgb(240,240,240)))
-                nprButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240,240,240))
-
-                plusButton.isEnabled = true
-                minusButton.isEnabled = true
-                multiplyButton.isEnabled = true
-                equalButton.isEnabled = false
-                waruButton.isEnabled = true
-                nprButton.isEnabled = true
-                ncrButton.isEnabled = true
-                rButton.isEnabled = true
-
-
-            } else {
-                secondNumber = secondNumber * 10 + 0
-
-                numberText.text = secondNumber.toString()
-
-                equalButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
-
-                equalButton.isEnabled = true
-
-            }
+            onNumber(10,0)
         }
 
         //1ボタン
         numberButton1.setOnClickListener {
-            if (operator == "empty"){
-                firstNumber = firstNumber * 10 + 1
-
-                numberText.text = firstNumber.toString()
-
-                plusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240,240,240))
-                minusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240,240,240))
-                multiplyButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240,240,240))
-                waruButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                rButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240,240,240))
-                ncrButton.backgroundTintList = ColorStateList.valueOf((Color.rgb(240,240,240)))
-                nprButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240,240,240))
-
-                plusButton.isEnabled = true
-                minusButton.isEnabled = true
-                multiplyButton.isEnabled = true
-                equalButton.isEnabled = false
-                waruButton.isEnabled = true
-                nprButton.isEnabled = true
-                ncrButton.isEnabled = true
-                rButton.isEnabled = true
-
-
-            }else{
-                secondNumber = secondNumber * 10 + 1
-
-                numberText.text = secondNumber.toString()
-
-                equalButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240,240,240))
-
-                equalButton.isEnabled = true
-
-            }
+            onNumber(10,1)
         }
 
         //２ボタン
         numberButton2.setOnClickListener {
-            if (operator == "empty") {
-                firstNumber = firstNumber * 10 + 2
+            onNumber(10,2)
 
-                numberText.text = firstNumber.toString()
-
-                plusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                minusButton.backgroundTintList =
-                    ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                multiplyButton.backgroundTintList =
-                    ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                waruButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                rButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240,240,240))
-                ncrButton.backgroundTintList = ColorStateList.valueOf((Color.rgb(240,240,240)))
-                nprButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240,240,240))
-
-                plusButton.isEnabled = true
-                minusButton.isEnabled = true
-                multiplyButton.isEnabled = true
-                equalButton.isEnabled = false
-                waruButton.isEnabled = true
-                nprButton.isEnabled = true
-                ncrButton.isEnabled = true
-                rButton.isEnabled = true
-
-
-            } else {
-                secondNumber = secondNumber * 10 + 2
-
-                numberText.text = secondNumber.toString()
-
-                equalButton.backgroundTintList =
-                    ColorStateList.valueOf(Color.rgb(240, 240, 240))
-
-                equalButton.isEnabled = true
-
-            }
         }
 
         //3botton
         numberButton3.setOnClickListener {
-            if (operator == "empty") {
-                firstNumber = firstNumber * 10 + 3
+            onNumber(10,3)
 
-                numberText.text = firstNumber.toString()
-
-                plusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                minusButton.backgroundTintList =
-                    ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                multiplyButton.backgroundTintList =
-                    ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                waruButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                rButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240,240,240))
-                ncrButton.backgroundTintList = ColorStateList.valueOf((Color.rgb(240,240,240)))
-                nprButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240,240,240))
-
-                plusButton.isEnabled = true
-                minusButton.isEnabled = true
-                multiplyButton.isEnabled = true
-                equalButton.isEnabled = false
-                waruButton.isEnabled = true
-                nprButton.isEnabled = true
-                ncrButton.isEnabled = true
-                rButton.isEnabled = true
-
-
-            } else {
-                secondNumber = secondNumber * 10 + 3
-
-                numberText.text = secondNumber.toString()
-
-                equalButton.backgroundTintList =
-                    ColorStateList.valueOf(Color.rgb(240, 240, 240))
-
-                equalButton.isEnabled = true
-
-            }
         }
 
         //4botton
         numberButton4.setOnClickListener {
-            if (operator == "empty") {
-                firstNumber = firstNumber * 10 + 4
-
-                numberText.text = firstNumber.toString()
-
-                plusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                minusButton.backgroundTintList =
-                    ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                multiplyButton.backgroundTintList =
-                    ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                waruButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                rButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240,240,240))
-                ncrButton.backgroundTintList = ColorStateList.valueOf((Color.rgb(240,240,240)))
-                nprButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240,240,240))
-
-                plusButton.isEnabled = true
-                minusButton.isEnabled = true
-                multiplyButton.isEnabled = true
-                equalButton.isEnabled = false
-                waruButton.isEnabled =true
-                nprButton.isEnabled = true
-                ncrButton.isEnabled = true
-                rButton.isEnabled = true
-
-
-            } else {
-                secondNumber = secondNumber * 10 + 4
-
-                numberText.text = secondNumber.toString()
-
-                equalButton.backgroundTintList =
-                    ColorStateList.valueOf(Color.rgb(240, 240, 240))
-
-                equalButton.isEnabled = true
-
-            }
+            onNumber(10,4)
         }
 
         //5botton
         numberButton5.setOnClickListener {
-            if (operator == "empty") {
-                firstNumber = firstNumber * 10 + 5
-
-                numberText.text = firstNumber.toString()
-
-                plusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                minusButton.backgroundTintList =
-                    ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                multiplyButton.backgroundTintList =
-                    ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                waruButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                rButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240,240,240))
-                ncrButton.backgroundTintList = ColorStateList.valueOf((Color.rgb(240,240,240)))
-                nprButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240,240,240))
-
-                plusButton.isEnabled = true
-                minusButton.isEnabled = true
-                multiplyButton.isEnabled = true
-                equalButton.isEnabled = false
-                waruButton.isEnabled =true
-                nprButton.isEnabled = true
-                ncrButton.isEnabled = true
-                rButton.isEnabled = true
-
-
-            } else {
-                secondNumber = secondNumber * 10 + 5
-
-                numberText.text = secondNumber.toString()
-
-                equalButton.backgroundTintList =
-                    ColorStateList.valueOf(Color.rgb(240, 240, 240))
-
-                equalButton.isEnabled = true
-
-            }
+            onNumber(10,5)
         }
 
         //6botton
         numberButton6.setOnClickListener {
-            if (operator == "empty") {
-                firstNumber = firstNumber * 10 + 6
-
-                numberText.text = firstNumber.toString()
-
-                plusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                minusButton.backgroundTintList =
-                    ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                multiplyButton.backgroundTintList =
-                    ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                waruButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                rButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240,240,240))
-                ncrButton.backgroundTintList = ColorStateList.valueOf((Color.rgb(240,240,240)))
-                nprButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240,240,240))
-
-                plusButton.isEnabled = true
-                minusButton.isEnabled = true
-                multiplyButton.isEnabled = true
-                equalButton.isEnabled = false
-                waruButton.isEnabled = true
-                nprButton.isEnabled = true
-                ncrButton.isEnabled = true
-                rButton.isEnabled = true
-
-
-            } else {
-                secondNumber = secondNumber * 10 + 6
-
-                numberText.text = secondNumber.toString()
-
-                equalButton.backgroundTintList =
-                    ColorStateList.valueOf(Color.rgb(240, 240, 240))
-
-                equalButton.isEnabled = true
-
-            }
+            onNumber(10,6)
         }
 
         //7botton
         numberButton7.setOnClickListener {
-            if (operator == "empty") {
-                firstNumber = firstNumber * 10 + 7
-
-                numberText.text = firstNumber.toString()
-
-                plusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                minusButton.backgroundTintList =
-                    ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                multiplyButton.backgroundTintList =
-                    ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                waruButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                rButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240,240,240))
-                ncrButton.backgroundTintList = ColorStateList.valueOf((Color.rgb(240,240,240)))
-                nprButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240,240,240))
-
-                plusButton.isEnabled = true
-                minusButton.isEnabled = true
-                multiplyButton.isEnabled = true
-                equalButton.isEnabled = false
-                waruButton.isEnabled =true
-                nprButton.isEnabled = true
-                ncrButton.isEnabled = true
-                rButton.isEnabled = true
-
-
-            } else {
-                secondNumber = secondNumber * 10 + 7
-
-                numberText.text = secondNumber.toString()
-
-                equalButton.backgroundTintList =
-                    ColorStateList.valueOf(Color.rgb(240, 240, 240))
-
-                equalButton.isEnabled = true
-
-            }
+            onNumber(10,7)
         }
 
         //8botton
         numberButton8.setOnClickListener {
-            if (operator == "empty") {
-                firstNumber = firstNumber * 10 + 8
+            onNumber(10,8)
 
-                numberText.text = firstNumber.toString()
-
-                plusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                minusButton.backgroundTintList =
-                    ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                multiplyButton.backgroundTintList =
-                    ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                waruButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                rButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240,240,240))
-                ncrButton.backgroundTintList = ColorStateList.valueOf((Color.rgb(240,240,240)))
-                nprButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240,240,240))
-
-                plusButton.isEnabled = true
-                minusButton.isEnabled = true
-                multiplyButton.isEnabled = true
-                equalButton.isEnabled = false
-                waruButton.isEnabled = true
-                nprButton.isEnabled = true
-                ncrButton.isEnabled = true
-                rButton.isEnabled = true
-
-
-            } else {
-                secondNumber = secondNumber * 10 + 8
-
-                numberText.text = secondNumber.toString()
-
-                equalButton.backgroundTintList =
-                    ColorStateList.valueOf(Color.rgb(240, 240, 240))
-
-                equalButton.isEnabled = true
-
-            }
         }
 
         //9botton
         numberButton9.setOnClickListener {
-            if (operator == "empty") {
-                firstNumber = firstNumber * 10 + 9
-
-                numberText.text = firstNumber.toString()
-
-                plusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                waruButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                minusButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                multiplyButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240, 240, 240))
-                rButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240,240,240))
-                ncrButton.backgroundTintList = ColorStateList.valueOf((Color.rgb(240,240,240)))
-                nprButton.backgroundTintList = ColorStateList.valueOf(Color.rgb(240,240,240))
-
-                plusButton.isEnabled = true
-                minusButton.isEnabled = true
-                multiplyButton.isEnabled = true
-                equalButton.isEnabled = false
-                waruButton.isEnabled = true
-                nprButton.isEnabled = true
-                ncrButton.isEnabled = true
-                rButton.isEnabled = true
-
-
-            } else {
-                secondNumber = secondNumber * 10 + 9
-
-                numberText.text = secondNumber.toString()
-
-                equalButton.backgroundTintList =
-                    ColorStateList.valueOf(Color.rgb(240, 240, 240))
-
-                equalButton.isEnabled = true
-
-            }
+            onNumber(10,9)
         }
 
         //+botton
